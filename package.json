@@ -1,6 +1,6 @@
 {
 	"name": "cs2-log-parser",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Parses CS2 logs into JavaScript objects.",
 	"license": "MIT",
 	"author": "GekasD",
@@ -19,7 +19,7 @@
 		"lib/**/*"
 	],
 	"engines": {
-		"node": ">=22.0.0"
+		"node": ">=20.0.0"
 	},
 	"scripts": {
 		"build": "npm run clean && npm run lint && npm run transpile",

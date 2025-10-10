@@ -1,4 +1,4 @@
-import type { LogTimestampFormat, BaseParser } from './models.js';
+import type { BaseParser } from './models.js';
 
 import type {
 	AssistedEvent,
@@ -81,7 +81,7 @@ export const defaultParsers = [
 
 export interface ParseOptions {
     parsers?: BaseParser<Event>[];
-    format?: LogTimestampFormat;
+    format?: 'file' | 'http';
 }
 
 // mm/dd/yyyy

@@ -28,7 +28,7 @@ export enum Team {
 // Mappings
 // ----------------------------
 
-export const teamMapping: Record<string, Team> = {
+const teamMapping: Record<string, Team> = {
 	Unassigned: Team.Unassigned,
 	Spectator: Team.Spectators,
 	TERRORIST: Team.Terrorists,
@@ -50,8 +50,6 @@ export type ConnectionState = 'connected' | 'entered' | 'disconnected';
 export type HitGroup = 'generic' | 'head' | 'chest' | 'stomach' | 'left_arm' | 'right_arm' | 'left_leg' | 'right_leg';
 
 export type SayTo = 'all' | 'team';
-
-export type LogTimestampFormat = 'file' | 'http';
 
 export type Entity = WorldEntity | ConsoleEntity | ChickenEntity | PlayerEntity | BotEntity | MultiplayerPhysicsPropEntity | DynamicPropEntity;
 
