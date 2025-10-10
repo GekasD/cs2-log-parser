@@ -1,0 +1,43 @@
+{
+	"name": "cs2-log-parser",
+	"version": "1.0.0",
+	"description": "Parses CS2 logs into JavaScript objects.",
+	"license": "MIT",
+	"author": "GekasD",
+	"keywords": [
+		"cs2",
+		"source2",
+		"log",
+		"parser",
+		"counter-strike",
+		"counter-strike-2"
+	],
+	"homepage": "https://github.com/GekasD/cs2-log-parser",
+	"type": "module",
+	"main": "lib/index.js",
+	"files": [
+		"lib/**/*"
+	],
+	"engines": {
+		"node": ">=22.0.0"
+	},
+	"scripts": {
+		"build": "npm run clean && npm run lint && npm run transpile",
+		"clean": "rimraf lib",
+		"lint": "eslint --fix",
+		"transpile": "tsc",
+		"test": "node --import tsx --test tests/*.test.ts",
+		"prepare": "npm run build"
+	},
+	"devDependencies": {
+		"@eslint/eslintrc": "^3.3.1",
+		"@eslint/js": "^9.37.0",
+		"@types/node": "^24.6.2",
+		"@typescript-eslint/eslint-plugin": "^8.46.0",
+		"@typescript-eslint/parser": "^8.46.0",
+		"eslint": "^9.37.0",
+		"rimraf": "^6.0.1",
+		"tsx": "^4.20.6",
+		"typescript": "^5.9.2"
+	}
+}
