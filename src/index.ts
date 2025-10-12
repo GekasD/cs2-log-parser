@@ -18,6 +18,6 @@ export {
 	ThrewEvent
 } from './parsers/index.js';
 
-export { Team, Entity } from './models.js';
+export { Team, Entity, Vector } from './models.js';
 
 export { Event, ParseOptions, defaultParsers, parse as default } from './parser.js';
