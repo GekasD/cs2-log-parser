@@ -18,6 +18,24 @@ export {
 	ThrewEvent
 } from './parsers/index.js';
 
-export { Team, Entity, Vector } from './models.js';
+export {
+	Team,
+	EntityID,
+	KillModifier,
+	SuicideMethod,
+	ConnectionState,
+	HitGroup,
+	SayTo,
+	Entity,
+	WorldEntity,
+	ConsoleEntity,
+	ChickenEntity,
+	BasePlayerEntity,
+	PlayerEntity,
+	BotEntity,
+	MultiplayerPhysicsPropEntity,
+	DynamicPropEntity,
+	Vector
+} from './models.js';
 
 export { Event, ParseOptions, defaultParsers, parse as default } from './parser.js';

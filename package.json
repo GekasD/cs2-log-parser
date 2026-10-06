@@ -1,6 +1,6 @@
 {
 	"name": "cs2-log-parser",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "Parses CS2 logs into JavaScript objects.",
 	"license": "MIT",
 	"author": "GekasD",
