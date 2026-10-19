@@ -9,6 +9,7 @@ import type {
 	KilledByBombEvent,
 	KilledEvent,
 	LeftBuyzoneEvent,
+	MoneyChangeEvent,
 	PickedUpEvent,
 	PurchasedEvent,
 	RconEvent,
@@ -29,6 +30,7 @@ import {
 	killedByBombParser,
 	killedParser,
 	leftBuyzoneParser,
+	moneyChangeParser,
 	pickedUpParser,
 	purchasedParser,
 	rconParser,
@@ -48,7 +50,8 @@ export type Event =
 	| EntityTriggeredEvent
 	| KilledByBombEvent
 	| KilledEvent
-	| LeftBuyzoneEvent
+  | LeftBuyzoneEvent
+	| MoneyChangeEvent
 	| PickedUpEvent
 	| PurchasedEvent
 	| RconEvent
@@ -68,6 +71,7 @@ export const defaultParsers = [
 	killedByBombParser,
 	killedParser,
 	leftBuyzoneParser,
+	moneyChangeParser,
 	pickedUpParser,
 	purchasedParser,
 	rconParser,
@@ -90,7 +94,7 @@ const { length: LENGTH_OF_DATE_FILE } = '01/01/1970 - 00:00:00: ';
 const { length: LENGTH_OF_DATE_HTTP } = '01/01/1970 - 00:00:00.000 - ';
 
 function parseTimestamp(timestamp: string): Date {
-	
+
 	const [dateStr, timeStr] = timestamp.split(' - ');
 	const [month, day, year] = dateStr.split('/');
 	const [hours, minutes, seconds] = timeStr.split(':');
@@ -120,7 +124,7 @@ export function parse(rawLog: string, parseOptions?: ParseOptions): Event | null
 	if (parseOptions.format === undefined) {
 		parseOptions.format = 'file';
 	}
-	
+
 	let log: string;
 	let timestamp: string;
 
@@ -159,7 +163,7 @@ export function parse(rawLog: string, parseOptions?: ParseOptions): Event | null
 			receivedAt: receivedAt,
 			payload
 		} as Event;
-		
+
 	}
 
 	return null;

@@ -18,7 +18,7 @@ export const attackedParser = defineParser<AttackedEvent>({
 	name: 'attacked',
 
 	patterns: [
-		concatPattern`^(?<attacker>${entityRe}) \\[(?<attackerPos>${vectorRe})\\] attacked (?<victim>${entityRe}) \\[(?<victimPos>${vectorRe})\\] with "(?<weapon>[^"]+)" \\(damage "(?<damageAmount>[^"]+)"\\) \\(damage_armor "(?<damageArmorAmount>[^"]+)"\\) \\(health "(?<remainingHealth>[^"]+)"\\) \\(armor "(?<remainingArmor>[^"]+)"\\) \\(hitgroup "(?<hitGroup>[^"]+)"\\)$`,
+		concatPattern`^(?<attacker>${entityRe}) \\[(?<attackerPos>${vectorRe})\\] attacked (?<victim>${entityRe}) \\[(?<victimPos>${vectorRe})\\] with "(?<weapon>[^"]+)" \\(damage "(?<damageAmount>\\d+)"\\) \\(damage_armor "(?<damageArmorAmount>\\d+)"\\) \\(health "(?<remainingHealth>\\d+)"\\) \\(armor "(?<remainingArmor>\\d+)"\\) \\(hitgroup "(?<hitGroup>[^"]+)"\\)$`,
 	],
 
 	parse: ({ attacker, attackerPos, victim, victimPos, weapon, damageAmount, damageArmorAmount, remainingHealth, remainingArmor, hitGroup }) => {

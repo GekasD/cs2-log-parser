@@ -2,8 +2,8 @@ import type { BaseEvent, Entity } from '../models.js';
 import { concatPattern, defineParser, entityRe, parseEntity, parseEquipmentList } from '../models.js';
 
 export interface LeftBuyzoneEventPayload {
-    player: Entity;
-    equipment: string[];
+  player: Entity;
+  equipment: string[];
 }
 
 export type LeftBuyzoneEvent = BaseEvent<'left_buyzone', LeftBuyzoneEventPayload>;

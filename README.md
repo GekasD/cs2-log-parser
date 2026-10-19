@@ -96,5 +96,7 @@ for (const logLine of logLines) {
 
 Some logs require additional ConVars to be set on the server in order to get logged, specifically:
 
+- `left_buyzone` needs `mp_logdetail` set to `3`.
 - `attacked` needs `mp_logdetail` set to either `1` (to log enemy attacks), `2` (to log team attacks) or `3` (to log both).
 - `picked_up` needs `mp_logdetail_items` set to `true` (or `1`). 
+- `money_change` needs `mp_logmoney` set to `true` (or `1`).

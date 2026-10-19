@@ -7,6 +7,7 @@ export {
 	KilledByBombEvent,
 	KilledEvent,
 	LeftBuyzoneEvent,
+	MoneyChangeEvent,
 	PickedUpEvent,
 	PurchasedEvent,
 	RconEvent,

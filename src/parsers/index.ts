@@ -6,6 +6,7 @@ export * from './entity-triggered.js';
 export * from './killed-by-bomb.js';
 export * from './killed.js';
 export * from './left-buyzone.js';
+export * from './money-change.js';
 export * from './picked-up.js';
 export * from './purchased.js';
 export * from './rcon.js';
